@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Brains</title>
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+    /* CSS Reset */
+    body {
+        font-family: Ubuntu, serif;
+        margin: 0px;
+        padding: 0px;
+        background-image: url('img/bg.jpg');
+        color: rgb(255 227 227);
+        /* height: 1280px; */
+        /* width: 1920px; */
+    }
+
+    ul {
+        list-style: none;
+        padding-top: 12px;
+        /* margin: 2px 16px; */
+        /*top right bottom left*/
+    }
+
+    .nav li {
+        list-style: none;
+
+        padding: 8px 14px;
+        margin-right: 12px;
+        font-size: 115%;
+        font-weight: 600;
+        display: inline-block;
+        border-radius: 2px;
+        /* background-color: #ede2f6; */
+
+        position: relative;
+    }
+
+    /*the hover transition can be on anchor tag also that will be better */
+    .nav li::after {
+        bottom: 0;
+        /**/
+        color: black;
+        content: "..";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        /**/
+        left: 44%;
+
+        background: #e1bee7;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    }
+
+    .nav li:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    .heading {
+        font-size: 140%;
+        font-weight: bolder;
+        margin: 0px 46px;
+        padding: 20px 24px;
+        /* border: 2px solid salmon; */
+        display: inline-block;
+        position: absolute;
+        /*parent is the header or the top*/
+        top: 12px;
+        left: 2px;
+        backdrop-filter: blur(12px);
+        /* background-color: rgba(255, 255, 255, 0.441);   */
+    }
+
+    /* @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .heading {
+    -webkit-backdrop-filter: blur(4px);
+  }
+} */
+    .heading img {
+        height:50px;
+        width: 75px;
+        padding-left: 14px;
+        /* padding: 20px 20px; */
+        /* filter: blur(8px); */
+        /* border: 2px solid black; */
+
+    }
+
+    .heading:hover {
+        filter: invert(0.9);
+        /* border:1px solid black; */
+    }
+
+    .heading div {
+        /* font-size: 164%; */
+        text-align: center;
+        font-family: Cabin, serif;
+    }
+
+    .nav {
+        display: block;
+        width: 58%;
+        margin: 30px 350px;
+        padding-bottom: 6px;
+        /* border: 2px solid salmon; */
+        border-bottom: #ce8bb1 2px solid;
+        backdrop-filter: blur(8px);
+    }
+
+    a {
+        color:aliceblue;
+        text-decoration: none;
+    }
+
+    .content {
+
+        backdrop-filter: blur(1px);
+        background-color: rgb(255 255 255);
+        display: inline;
+        position: absolute;
+        margin-right: 80px;
+        margin-left: 70px;
+        top: 276px;
+        font-size: 30px;
+        color: #30587c;
+        padding: 10px 10px;
+        border-radius: 10px;
+    }
+
+    .invite {
+        backdrop-filter: blur(8px);
+        display: inline-block;
+        padding: 8px 0px;
+        /* border: 2px solid salmon; */
+        position: absolute;
+        /*parent is the header or the top*/
+        top: 14px;
+        right: 14px;
+    }
+
+    button {
+        font-family: Ubuntu, serif;
+        margin-left: 20px;
+        text-emphasis: none;
+        padding: 6px 27px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #52495d;
+        font-weight: 600;
+        font-size: 14px;
+        border: 2px solid #c1bf8b;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #60536d;
+        text-decoration: underline;
+        color: #ffffff;
+    }
+
+    form {
+        font-family: Rubik, serif;
+        border: 2px solid #aa6fc3;
+        display: inline-block;
+        padding: 44px 84px;
+        margin: -6px 140px;
+        font-size: 22px;
+        line-height: 24px;
+        /* font-family: Varela Round, serif; */
+        border-radius: 20px;
+        color: #b2ebf2;
+    }
+
+
+    h3 {
+        padding-left: 268px;
+        padding-top: 0px;
+        font-size: 135%;
+        color: #9be6dc;
+    }
+
+    input {
+        font-family: Rubik, serif;
+        padding: 5px 14px;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="heading">
+            <img src="img/logo1.jpg" alt="">
+            <div>.littleBrains </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a> </li>
+                <!-- A hash - `#` within a hyperlink specifies an HTML element id to which the window should be scrolled.href="#some-id" would scroll to an element on the current page such as <div id="some-id">.href="//site.example/#some-id" would go to site.example and scroll to the id on that page. -->
+                <!-- href="#" doesn't specify an id name, but does have a corresponding location - the top of the page. Clicking an anchor with href="#" will move the scroll position to the top. -->
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Exercises</a></li>
+                <li><a href="#">Leaderboards</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="invite">
+            <button class="btn">Call</button>
+            <button class="btn">Email</button>
+        </div>
+    </header>
+    <br>
+    <br>
+   
+    <div>
+        <h3>Log in &nbsp;| &nbsp;Register</h3>
+    </div>
+
+    <form action="project.js" id="form">
+        <div style="backdrop-filter: blur(8px);">
+            <div>
+                Name: <input type="text" name="myName" id="name" placeholder="Type Here!">
+            </div>
+            <br>
+            <div>
+                Email: <input type="email" name="myEmail" id="email" placeholder="Type Here!">
+            </div>
+            <br>
+            <div>
+                School: <input style="padding-right: 20px;" type="text" name="mySchool" id="school"
+                    placeholder="Type Here!">
+            </div>
+            <br>
+            <div>
+                Mobile: <input type="tel" name="myNumber" id="number" placeholder="Type Here!">
+            </div>
+            <br>
+            <div>
+                <button style="margin-left: 80px;">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="content">
+        Welcome!<br>Studying is now more simple and reliable for the young little minds of India.<BR>
+        Join the Elite Batch by registering now!
+    </div>
+</body>
+
+</html>
